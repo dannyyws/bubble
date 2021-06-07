@@ -1,3 +1,5 @@
+var runBtn = document.querySelector(".run_btn");
+
 var canvas = document.querySelector("#canvas");
 var ctx = canvas.getContext("2d");
 var tx = window.innerWidth;
@@ -203,7 +205,7 @@ function keyA_to_add()
 function keyR_to_run()
 {
 	if (event.code == "KeyR"){
-		is_run = (is_run == false);
+		toggle_run();
 	}
 }
 
@@ -212,6 +214,15 @@ function live_show(){
 	if (is_run){
 		add_ball();
 	}
+}
+
+function toggle_run(){
+	runBtn.classList.toggle("active");
+	is_run = (is_run == false);
+}
+
+function remove_ball(){
+	ball_list.splice(0,1);
 }
 
 // hold the ball

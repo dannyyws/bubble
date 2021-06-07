@@ -22,3 +22,45 @@ body {
 	height:100vh;
 	margin:0;
 }
+
+#canvas {
+	position:absolute;
+	z-index:3;
+}
+
+.button-div button{
+	background-color: rgba(0,200,200,0.6);
+}
+
+.button_div {
+	display:flex;
+	flex-direction:column;
+	width:5rem;
+	position:relative;
+	z-index:1000;
+	margin: auto 15px;
+	padding-top:20%;
+}
+
+.default_button {
+	border-radius:15px;
+	height:5rem;
+	margin-top:.2rem;
+	font-size:2rem;
+}
+
+.default_button:hover{
+	background-color: rgba(200,200,200,0.4);
+}
+
+.click_button:active{
+	background-color: rgba(0,0,200,1);
+}
+
+.toggle_btn:focus{
+	border-color: none;
+}
+
+.toggle_btn.active{
+	background-color: rgba(0,200,0,1);
+}
